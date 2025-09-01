@@ -1,4 +1,5 @@
 fastapi
+crewai_tools
 uvicorn
 pydantic
 python-dotenv
