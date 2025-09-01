@@ -1,0 +1,30 @@
+source_task:
+  description: >
+    Collect and summarize the most relevant sources and insights about {topic}, 
+    focusing on credibility, freshness (2025 context), 
+    and usefulness for creating social media content.
+  expected_output: >
+    A structured list of sources with main points (at least 5).
+  agent: source_collector
+
+preparation_task:
+  description: >
+    Take the summarized sources and turn them into a structured draft suitable for social media content. 
+    Ensure the content is engaging, easy to understand, and highlights the most impactful insights.
+    make sure that fits the desired {tone} and prepares the content for {word_count} words. 
+    Ensure it is audience-friendly, engaging, and includes impactful takeaways.
+  expected_output: >
+    A clear, engaging draft that reflects the chosen {tone} and is suitable 
+    for refinement into a publish-ready post.
+  agent: content_preparer
+
+personalization_task:
+  description: >
+    Adapt the draft into a final version that strictly matches the requested 
+    {tone} and word count of {word_count}. Ensure platform readability, polish, 
+    and engagement. The result must be publication-ready.
+  expected_output: >
+    Final version of the post ready for publishing.
+    Must strictly follow {word_count} words and {tone}.
+  agent: personalizer
+  output_file: output/post.txt

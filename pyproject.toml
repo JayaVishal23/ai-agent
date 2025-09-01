@@ -1,0 +1,21 @@
+[project]
+name = "ai_project"
+version = "0.1.0"
+description = "ai_project using crewAI"
+authors = [
+    { name = "vishal" }
+]
+requires-python = ">=3.10,<3.13"
+
+dependencies = [
+    "crewai[tools]",
+    "google-generativeai"
+]
+
+[project.scripts]
+run_crew = "ai_project.main:run_crew"
+ai_project = "ai_project.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
