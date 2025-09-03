@@ -4,13 +4,6 @@ pydantic
 python-dotenv
 crewai
 langchain
-openai
-pyyaml
-pytest
-httpx
 google-generativeai
-google-api-python-client
-google-auth
-google-auth-httplib2
-crewai-tools
+crewai[tools]
 
