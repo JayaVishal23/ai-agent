@@ -1,9 +1,6 @@
 fastapi
 uvicorn
-pydantic
 python-dotenv
-crewai
-crewai-tools
-langchain
+crewai==0.175.0
+crewai-tools==0.65.0
 google-generativeai
-
