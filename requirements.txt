@@ -12,4 +12,5 @@ google-generativeai
 google-api-python-client
 google-auth
 google-auth-httplib2
+crewai-tools
 
