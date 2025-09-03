@@ -2,8 +2,23 @@ from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse
 import os
 from ai_project.crew import AiProjectCrew
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
+
+origins = [
+    os.getenv("FRONTEND_URL"),
+    os.getenv("FRONTEND_URL_LOCAL")     
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,        
+    allow_credentials=True,
+    allow_methods=["*"],            
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
